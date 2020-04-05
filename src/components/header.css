@@ -1,0 +1,57 @@
+.Header {
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding: 50px 0;
+  transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.HeaderScrolled {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 15px 0;
+  /* backdrop-filter: blur(20px); This works well on Safari*/
+}
+
+.HeaderGroup {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  align-items: center;
+  justify-items: center;
+}
+
+.Header a {
+  color: white;
+  font-weight: 600;
+}
+
+.Header button {
+  padding: 5px 15px;
+  font-size: 20px;
+  color: black;
+  background: rgb(95, 95, 241);
+  font-weight: 600;
+  border-radius: 20px;
+  outline: none;
+  cursor: pointer;
+  transition: 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Header button:hover {
+  background: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  transform: translateY(-3px);
+}
+
+@media (max-width: 640px) {
+  .Header {
+    padding: 15px 0;
+  }
+  .HeaderGroup {
+    grid-template-columns: repeat(4, auto);
+  }
+  .Header a:nth-child(4) {
+    display: none;
+  }
+}
